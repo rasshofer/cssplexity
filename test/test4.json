@@ -1,5 +1,5 @@
 [{
-  "complexity": 6,
+  "complexity": 7,
   "selector": "a#content.active > div::first-line [data-content]"
 }, {
   "complexity": 1,

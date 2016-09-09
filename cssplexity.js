@@ -20,7 +20,11 @@ function generateSelectorTree (selector) {
   }
 
   var conditions = filtered.shift().nodes.filter(function (subnode) {
-    return ['spacing'].indexOf(subnode.type) === -1;
+    if (subnode.type === 'spacing') {
+      subnode.type = 'child';
+      delete subnode.value;
+    }
+    return subnode;
   });
 
   return conditions.reverse();

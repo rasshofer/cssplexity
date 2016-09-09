@@ -1,4 +1,4 @@
 [{
-  "complexity": 4,
+  "complexity": 7,
   "selector": ".grid-homepage .teaser .article-title .headline[data-tooltip*=\"demo\"]"
 }]

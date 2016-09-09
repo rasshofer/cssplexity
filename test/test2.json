@@ -1,8 +1,8 @@
 [{
-  "complexity": 3,
+  "complexity": 6,
   "selector": ".grid-homepage .teaser .article-title .headline"
 }, {
-  "complexity": 3,
+  "complexity": 6,
   "selector": ".grid-homepage .teaser .article-title .headline-intro"
 }, {
   "complexity": 0,

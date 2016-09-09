@@ -18,7 +18,7 @@ tap.equal(cssplexity.selector(null), false);
 tap.equal(cssplexity.selector(), false);
 tap.equal(cssplexity.selector(''), false);
 tap.equal(cssplexity.selector('body'), 0);
-tap.equal(cssplexity.selector('.grid-homepage .teaser .article-title .headline'), 3);
+tap.equal(cssplexity.selector('.grid-homepage .teaser .article-title .headline'), 6);
 tap.equal(cssplexity.selector(new Array(3).join(' ')), false);
 
 // Parser API
@@ -49,16 +49,22 @@ tap.equal(cssplexity.tree(''), false);
 tap.equal(cssplexity.tree(new Array(3).join(' ')), false);
 tap.deepEqual(cssplexity.tree('.grid-homepage .teaser .article-title .headline'), [{
   type: 'class',
-  'name': 'headline'
+  name: 'headline'
+}, {
+  type: 'child'
 }, {
   type: 'class',
-  'name': 'article-title'
+  name: 'article-title'
+}, {
+  type: 'child'
 }, {
   type: 'class',
-  'name': 'teaser'
+  name: 'teaser'
+}, {
+  type: 'child'
 }, {
   type: 'class',
-  'name': 'grid-homepage'
+  name: 'grid-homepage'
 }]);
 
 // Subject API
@@ -69,7 +75,7 @@ tap.equal(cssplexity.subject(''), false);
 tap.equal(cssplexity.subject(new Array(3).join(' ')), false);
 tap.deepEqual(cssplexity.subject('.grid-homepage .teaser .article-title .headline'), {
   type: 'class',
-  'name': 'headline'
+  name: 'headline'
 });
 
 // Conditions API
@@ -79,12 +85,18 @@ tap.equal(cssplexity.conditions(), false);
 tap.equal(cssplexity.conditions(''), false);
 tap.equal(cssplexity.conditions(new Array(3).join(' ')), false);
 tap.deepEqual(cssplexity.conditions('.grid-homepage .teaser .article-title .headline'), [{
-  type: 'class',
-  'name': 'article-title'
+  type: 'child'
 }, {
   type: 'class',
-  'name': 'teaser'
+  name: 'article-title'
+}, {
+  type: 'child'
 }, {
   type: 'class',
-  'name': 'grid-homepage'
+  name: 'teaser'
+}, {
+  type: 'child'
+}, {
+  type: 'class',
+  name: 'grid-homepage'
 }]);
