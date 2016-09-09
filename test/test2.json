@@ -1,0 +1,10 @@
+[{
+  "complexity": 3,
+  "selector": ".grid-homepage .teaser .article-title .headline"
+}, {
+  "complexity": 3,
+  "selector": ".grid-homepage .teaser .article-title .headline-intro"
+}, {
+  "complexity": 0,
+  "selector": "body"
+}]

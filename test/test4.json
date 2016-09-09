@@ -1,0 +1,7 @@
+[{
+  "complexity": 6,
+  "selector": "a#content.active > div::first-line [data-content]"
+}, {
+  "complexity": 1,
+  "selector": "a:not(:visited)"
+}]

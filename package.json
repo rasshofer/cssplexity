@@ -1,0 +1,35 @@
+{
+  "name": "cssplexity",
+  "version": "0.0.1",
+  "description": "A small helper to calculcate the cyclomatic complexity of CSS selectors",
+  "author": {
+    "name": "Thomas Rasshofer",
+    "email": "hello@thomasrasshofer.com",
+    "url": "http://thomasrasshofer.com/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rasshofer/cssplexity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rasshofer/cssplexity/issues"
+  },
+  "main": "cssplexity.js",
+  "keywords": [
+    "cssplexity",
+    "css",
+    "complexity"
+  ],
+  "devDependencies": {
+    "jshint": "^2.9.1",
+    "tap": "^5.7.0"
+  },
+  "dependencies": {
+    "css": "^2.2.1",
+    "css-selector-tokenizer": "^0.7.0"
+  },
+  "scripts": {
+    "test": "jshint cssplexity.js && tap test/tests.js --cov"
+  }
+}
