@@ -67,7 +67,7 @@ function calculcateSelectorComplexity (selector) {
     return false;
   }
 
-  return conditions.length;
+  return (conditions.length + 1);
 
 }
 

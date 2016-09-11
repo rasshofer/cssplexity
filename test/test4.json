@@ -1,7 +1,7 @@
 [{
-  "complexity": 7,
+  "complexity": 8,
   "selector": "a#content.active > div::first-line [data-content]"
 }, {
-  "complexity": 1,
+  "complexity": 2,
   "selector": "a:not(:visited)"
 }]

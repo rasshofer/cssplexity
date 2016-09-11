@@ -1,10 +1,10 @@
 [{
-  "complexity": 6,
+  "complexity": 7,
   "selector": ".grid-homepage .teaser .article-title .headline"
 }, {
-  "complexity": 6,
+  "complexity": 7,
   "selector": ".grid-homepage .teaser .article-title .headline-intro"
 }, {
-  "complexity": 0,
+  "complexity": 1,
   "selector": "body"
 }]

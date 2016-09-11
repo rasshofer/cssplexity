@@ -17,8 +17,8 @@ tap.equal(typeof cssplexity.conditions, 'function');
 tap.equal(cssplexity.selector(null), false);
 tap.equal(cssplexity.selector(), false);
 tap.equal(cssplexity.selector(''), false);
-tap.equal(cssplexity.selector('body'), 0);
-tap.equal(cssplexity.selector('.grid-homepage .teaser .article-title .headline'), 6);
+tap.equal(cssplexity.selector('body'), 1);
+tap.equal(cssplexity.selector('.grid-homepage .teaser .article-title .headline'), 7);
 tap.equal(cssplexity.selector(new Array(3).join(' ')), false);
 
 // Parser API
