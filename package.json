@@ -1,6 +1,6 @@
 {
   "name": "cssplexity",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A small helper to calculcate the cyclomatic complexity of CSS selectors",
   "author": {
     "name": "Thomas Rasshofer",

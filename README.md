@@ -65,6 +65,8 @@ In case no valid CSS selector is provided, `false` is returned.
 
 ## Changelog
 
+* 0.2.0
+  * Fix complexity calculation to include the subject as well
 * 0.1.0
   * Fix complexity calculation to include child selectors as well
 * 0.0.2
