@@ -28,6 +28,7 @@ tap.equal(cssplexity.parse(), false);
 tap.equal(cssplexity.parse(''), false);
 tap.equal(cssplexity.parse('invalid code'), false);
 tap.equal(cssplexity.parse(new Array(3).join(' ')), false);
+tap.equal(cssplexity.parse('/* comment */'), false);
 
 [
   'test1',

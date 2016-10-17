@@ -88,12 +88,14 @@ function parseCss (code) {
 
   if (obj.stylesheet && obj.stylesheet.rules) {
     obj.stylesheet.rules.forEach(function (rule) {
-      rule.selectors.forEach(function (selector) {
-        results.push({
-          selector: selector,
-          complexity: calculcateSelectorComplexity(selector)
+      if (rule.selectors && rule.selectors.length) {
+        rule.selectors.forEach(function (selector) {
+          results.push({
+            selector: selector,
+            complexity: calculcateSelectorComplexity(selector)
+          });
         });
-      });
+      }
     });
   }
 
