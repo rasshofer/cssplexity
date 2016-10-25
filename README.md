@@ -47,6 +47,9 @@ In case no valid CSS selector is found within the provided CSS code, `false` is 
 
 ## Changelog
 
+* 0.4.0
+  * Remove CSS selector tree methods in favor of its own npm module
+  * Update outdated dependencies
 * 0.3.0
   * Fix parser for selector-less input (e.g. comments)
 * 0.2.0
