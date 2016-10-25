@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "css": "^2.2.1",
-    "css-selector-tokenizer": "^0.7.0"
+    "css-selector-tree": "0.0.2"
   },
   "scripts": {
     "test": "jshint cssplexity.js && tap test/tests.js --cov"

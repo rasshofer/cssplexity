@@ -45,24 +45,6 @@ Accepts CSS code and returns an object containing the complexity per selector, o
 
 In case no valid CSS selector is found within the provided CSS code, `false` is returned.
 
-### cssplexity.tree(selector)
-
-Accepts a CSS selector and returns its tree (subject and conditions).
-
-In case no valid CSS selector is provided, `false` is returned.
-
-### cssplexity.subject(selector)
-
-Accepts a CSS selector and returns its subject.
-
-In case no valid CSS selector is provided, `false` is returned.
-
-### cssplexity.conditions(selector)
-
-Accepts a CSS selector and returns its conditions.
-
-In case no valid CSS selector is provided, `false` is returned.
-
 ## Changelog
 
 * 0.3.0

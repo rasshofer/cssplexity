@@ -8,9 +8,6 @@ var cssplexity = require('../cssplexity');
 tap.equal(typeof cssplexity, 'object');
 tap.equal(typeof cssplexity.selector, 'function');
 tap.equal(typeof cssplexity.parse, 'function');
-tap.equal(typeof cssplexity.tree, 'function');
-tap.equal(typeof cssplexity.subject, 'function');
-tap.equal(typeof cssplexity.conditions, 'function');
 
 // Selector API
 
@@ -41,63 +38,3 @@ tap.equal(cssplexity.parse('/* comment */'), false);
   var expected = require(path.resolve(__dirname, test + '.json'), 'utf8');
   tap.deepEqual(result, expected);
 });
-
-// Tree API
-
-tap.equal(cssplexity.tree(null), false);
-tap.equal(cssplexity.tree(), false);
-tap.equal(cssplexity.tree(''), false);
-tap.equal(cssplexity.tree(new Array(3).join(' ')), false);
-tap.deepEqual(cssplexity.tree('.grid-homepage .teaser .article-title .headline'), [{
-  type: 'class',
-  name: 'headline'
-}, {
-  type: 'child'
-}, {
-  type: 'class',
-  name: 'article-title'
-}, {
-  type: 'child'
-}, {
-  type: 'class',
-  name: 'teaser'
-}, {
-  type: 'child'
-}, {
-  type: 'class',
-  name: 'grid-homepage'
-}]);
-
-// Subject API
-
-tap.equal(cssplexity.subject(null), false);
-tap.equal(cssplexity.subject(), false);
-tap.equal(cssplexity.subject(''), false);
-tap.equal(cssplexity.subject(new Array(3).join(' ')), false);
-tap.deepEqual(cssplexity.subject('.grid-homepage .teaser .article-title .headline'), {
-  type: 'class',
-  name: 'headline'
-});
-
-// Conditions API
-
-tap.equal(cssplexity.conditions(null), false);
-tap.equal(cssplexity.conditions(), false);
-tap.equal(cssplexity.conditions(''), false);
-tap.equal(cssplexity.conditions(new Array(3).join(' ')), false);
-tap.deepEqual(cssplexity.conditions('.grid-homepage .teaser .article-title .headline'), [{
-  type: 'child'
-}, {
-  type: 'class',
-  name: 'article-title'
-}, {
-  type: 'child'
-}, {
-  type: 'class',
-  name: 'teaser'
-}, {
-  type: 'child'
-}, {
-  type: 'class',
-  name: 'grid-homepage'
-}]);
